@@ -1,0 +1,43 @@
+1-Le mot-clé qui permet aux membres de la classe (méthodes et propriétés) 
+d'être utilisés sans avoir à instancier une nouvelle instance de la classe est static.
+
+2-La méthode magique __toString() permet à une classe de contrôler sa représentation 
+sous forme de chaîne lorsqu'elle est imprimée ou convertie en chaîne
+
+3-<?php
+// Open the file for reading
+$handle = fopen('statistique.txt', 'r');
+
+// Check if the file was opened successfully
+if ($handle) {
+    // Read the file line by line
+    while (($line = fgets($handle)) !== false) {
+        // Output each line
+        echo $line . "<br>";
+    }
+
+    // Close the file handle
+    fclose($handle);
+} else {
+    echo "Error opening the file.";
+}
+?>
+
+4-La méthode qui trie un tableau selon la clé par ordre décroissant est krsort()
+
+5-<?php
+// Start the session
+session_start();
+
+// Set the color variable
+$_SESSION['color'] = 'RED';
+
+// Set the session cookie expiration time to 20 days
+$session_expiration = time() + (20 * 24 * 60 * 60); // 20 days
+
+// Update the session cookie expiration time
+setcookie(session_name(), session_id(), $session_expiration);
+
+// Display a message
+echo "Color variable 'RED' stored in the browser for 20 days.";
+?>
